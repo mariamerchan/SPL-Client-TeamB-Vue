@@ -156,7 +156,7 @@ export default {
           socialUrl: this.testimonioActual.socialUrl
         };
 
-        const response = await fetch(`${process.env.VUE_APP_SERVER_URL}actualizar-testimonio/${testimonio.id}`, {
+        const response = await fetch(`${process.env.VUE_APP_SERVER_URL}api/actualizar-testimonio/${testimonio.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
@@ -218,10 +218,26 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    margin: 20px 0;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center !important;
+    margin: 20px;
+  }
+
+}
+
 h1 {
   font-weight: bold;
-  color: #165C66;
+  color: #165c66;
 }
 
 .btn-container {
@@ -229,6 +245,7 @@ h1 {
   justify-content: flex-end;
   margin-bottom: 5%;
 }
+
 
 .headline {
   font-size: 20px;

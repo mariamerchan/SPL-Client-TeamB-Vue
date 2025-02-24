@@ -8,7 +8,7 @@
     <!-- La línea de abajo es el título que tiene el nombre del equipo -->
     <h2>Team B</h2>
     <LoaderComponent v-if="isLoading" />
-    <v-row class="row-container mt-9">
+    <v-row v-else class="row-container mt-9">
       <v-col v-for="ofrecimiento in ofrecimientos" :key="ofrecimiento.id" cols="12" sm="6" md="4" lg="3">
         <v-card shaped class="mb-4">
           <v-card-title class="headline">

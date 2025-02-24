@@ -38,6 +38,7 @@ export default {
   },
   data() {
     return {
+      isLoading: true,
       ofrecimientos: [],
     };
   },
@@ -53,9 +54,11 @@ export default {
         .then(response => response.json())
         .then(data => {
           this.ofrecimientos = data;
+          this.isLoading = false;
         })
         .catch(error => {
           console.error(error);
+          this.isLoading = false;
         });
     },
   },

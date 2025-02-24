@@ -6,7 +6,8 @@
       nos gustaría ofrecer al equipo?</p>
     <!-- Esto es un comentario en HTML -->
     <!-- La línea de abajo es el título que tiene el nombre del equipo -->
-    <h2>Illuminati</h2>
+    <h2>Team B</h2>
+    <LoaderComponent v-if="isLoading" />
     <v-row class="row-container mt-9">
       <v-col v-for="ofrecimiento in ofrecimientos" :key="ofrecimiento.id" cols="12" sm="6" md="4" lg="3">
         <v-card shaped class="mb-4">
@@ -29,7 +30,12 @@
 </template>
 
 <script>
+import LoaderComponent from '@/components/LoaderComponent.vue';
+
 export default {
+  components: {
+    LoaderComponent
+  },
   data() {
     return {
       ofrecimientos: [],
@@ -84,8 +90,7 @@ h3 {
 p {
   text-align: center;
   font-weight: 500;
-  width: 30%;
-  margin: 0 auto;
+  margin: 0 30px;
 }
 
 .headline {

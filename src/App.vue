@@ -79,4 +79,13 @@ export default {
 .btn-container {
   display: flex;
 }
+
+.btn-container-app {
+  display: flex;
+  gap: 10px;
+}
+
+.btns {
+  border: 1px solid #FFF;
+}
 </style>
